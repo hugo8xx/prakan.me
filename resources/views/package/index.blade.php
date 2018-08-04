@@ -22,8 +22,8 @@
                         <td>{{ $package->policy_no }}</td>
                         <td>{{ $package->car->license_no }}</td>
                         <td>
-                            {{ $package->date_start->format('d/m/Y') }} -
-                            {{ $package->date_stop->format('d/m/Y') }}
+                            {{ ($package->date_start) ? $package->date_start->format('d/m/Y') : '' }} -
+                            {{ ($package->date_stop) ? $package->date_stop->format('d/m/Y') : '' }}
                         </td>
                         <td>
                             <a href="{{ route('package.edit', $package->id) }}" class="btn btn-info btn-sm">edit</a>

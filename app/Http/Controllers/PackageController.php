@@ -66,7 +66,7 @@ class PackageController extends Controller
 
         $car->packages()->save($package);
 
-        return redirect()->ronte('package.index')->with('success','เพิ่มข้อมูลเรียบร้อย');
+        return redirect()->route('package.index')->with('success','เพิ่มข้อมูลเรียบร้อย');
     }
 
     /**
