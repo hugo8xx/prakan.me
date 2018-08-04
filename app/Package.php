@@ -17,4 +17,9 @@ class Package extends Model
     {
         return $this->belongsTo('App\Car');
     }
+
+    public function histories()
+    {
+        return $this->hasMany('App\History');
+    }
 }
