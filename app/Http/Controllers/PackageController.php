@@ -77,7 +77,11 @@ class PackageController extends Controller
      */
     public function show($id)
     {
-        //
+        $package = Package::findOrFail($id);
+
+        return view('package.show',[
+            'package' => $package
+        ]);
     }
 
     /**
