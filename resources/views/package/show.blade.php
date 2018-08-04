@@ -2,8 +2,7 @@
 	<thead>
 		<tr>
 			<th scope="col">ลำดับ</th>
-			<th scope="col">ละติจูด</th>
-			<th scope="col">ลองติจูด</th>
+			<th scope="col">แผนที่</th>
 			<th scope="col">ค่าใช้จ่าย</th>
 			<th scope="col">หมายเหตุ</th>
 			<th scope="col">วันที่</th>
@@ -16,10 +15,9 @@
 				{{ ($i+1) }}
 			</td>
 			<td>
-				{{ $history->lat }}
-			</td>
-			<td>
-				{{ $history->long }}
+				<a href="https://www.google.com/maps/search/?api=1&query={{ $history->lat }},{{ $history->long }}" class="map-btn" target="_blank">
+					<img src="{{ asset('33622.svg') }}" width="32px" height="32px" title="lat:{{ $history->lat }}, long:{{ $history->long }}">
+				</a>
 			</td>
 			<td>
 				{{ $history->expenses }}
