@@ -32,9 +32,7 @@
 $('form').submit(function(e) {
     e.preventDefault();
     axios.post('{{ route('car.store') }}', {
-        params: {
-          license_no: $('#license_no').val()
-        }
+        license_no: $('#license_no').val()
     })
     .then(function (response) {
         $('#result').html(response.data );

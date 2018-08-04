@@ -73,7 +73,16 @@ class CarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $car = Car::find($id);
+        $package = $car->packages()->first();
+
+        $history = new History;
+        $history->package_id = $package->id;
+        $history->lat = $request->get('lat');
+        $history->long = $request->get('long');
+        $history->save();
+
+        return redirect()->route('home')->with('success', 'แจ้งเคลมประกันเรียบร้อยแล้ว');
     }
 
     /**
