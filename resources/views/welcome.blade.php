@@ -6,22 +6,13 @@
         <div class="col-md-12">
             <form action="" method="POST" class="form">
             {{ csrf_field() }}
-            <?php /*
-            <div class="form-group">
-                <input type="text" id="license_no" name="license_no" placeholder="เลขทะเบียน" class="form-control">
-            </div>
-            <div class="form-group">
-                <select class="form-control"></select>
-            </div>
-            <button type="submit" class="btn btn-primary">Me Prakan</button>
-*/ ?>
                 <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="license_no">เลขทะเบียน</label>
+                    <div class="form-group col-md-8">
+                        {{-- <label for="license_no">เลขทะเบียน</label> --}}
                         <input type="text" name="license_no" class="form-control" id="license_no" placeholder="เลขทะเบียน">
                     </div>
-                    <div class="form-group col-md-4">
-                        <label for="province_id">จังหวัด</label>
+                    <div class="form-group col-md-2">
+                        {{-- <label for="province_id">จังหวัด</label> --}}
                         <select  id="province_id" name="province_id" class="form-control custome-select">
                             <option value=""></option>
                             <option value="64">กระบี่</option>
@@ -29,7 +20,7 @@
                         </select>
                     </div>
                     <div class="form-group col-md-2">
-                        <button type="submit" class="btn btn-primary">Me Prakan</button>
+                        <button type="submit" class="btn btn-primary btn-block">Me Prakan</button>
                     </div>
                 </div> 
             </form>
