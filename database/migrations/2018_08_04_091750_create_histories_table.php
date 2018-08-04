@@ -18,7 +18,7 @@ class CreateHistoriesTable extends Migration
             $table->integer('package_id');
             $table->string('lat');
             $table->string('long');
-            $table->decimal('expenses', 10, 2);
+            $table->decimal('expenses', 10, 2)->nullable();
             $table->text('remark')->nullable();
             $table->timestamps();
         });

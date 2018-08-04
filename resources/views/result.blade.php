@@ -36,10 +36,9 @@
         </p>
       </div>
       <div class="modal-footer">
-        <input type="" name="lat" id="lat">
-        <input type="" name="long" id="long">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
+        <input type="hidden" name="lat" id="lat">
+        <input type="hidden" name="long" id="long">
+        <button type="submit" class="btn btn-primary">ยืนยัน</button>
       </div>
     </div>
   </div>

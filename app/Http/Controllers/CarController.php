@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Car;
+use App\History;
 
 class CarController extends Controller
 {
@@ -82,7 +83,7 @@ class CarController extends Controller
         $history->long = $request->get('long');
         $history->save();
 
-        return redirect()->route('home')->with('success', 'แจ้งเคลมประกันเรียบร้อยแล้ว');
+        return redirect('/')->with('success', 'แจ้งเคลมประกันเรียบร้อยแล้ว');
     }
 
     /**
